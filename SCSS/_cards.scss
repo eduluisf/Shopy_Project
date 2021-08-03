@@ -24,7 +24,21 @@
   padding: 32px;
   margin: 16px 0;
   width: 250px;
+
+  img {
+    margin: 0px auto;
+    width: 60%;
+    border-radius: 10%;
+    height: 50%;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
+
 .card:hover {
   display: flex;
   flex-direction: column;
@@ -35,18 +49,6 @@
   transform: translateY(-10px);
 }
 
-.card img {
-  margin: 0px auto;
-  width: 60%;
-  border-radius: 10%;
-  height: 50%;
-}
-.card .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-}
 .btn-dark {
   border-radius: 25px;
   color: white;

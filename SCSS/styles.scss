@@ -27,11 +27,12 @@ a {
 }
 /*nav */
 @import "navigation";
-
+@import "advcontent";
 /* caorusel */
 @import "carousel";
 /*footer */
-@import "_infomain";
+@import "footer";
+@import "infomain";
 /*cards*/
 @import "cards";
 
