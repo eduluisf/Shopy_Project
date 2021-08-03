@@ -4,7 +4,6 @@
   --b1: #000000;
   --b2: #ffffff;
   --b3: #c4c7f2;
-  --b4: #020202;
   --b5: #f7bcb8;
   --b6: #fcfcfc; }
 
@@ -405,13 +404,13 @@ header {
   padding: 32px;
   margin: 0 auto; }
   .containerForm a {
-    color: black;
+    color: #298b82;
     text-decoration: none; }
 
 .formContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
   width: 90%;
@@ -420,8 +419,11 @@ header {
   padding: 64px;
   margin: 32px;
   border-radius: 10px;
-  background-color: #b7b7e4;
+  background-color: var(--b2);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); }
+  .formContainer .itemRegisterContainer,
+  .formContainer .itemLogContainer {
+    margin: 32px; }
 
 .containerItem {
   width: 100%; }
@@ -456,7 +458,7 @@ header {
 
 .btn-registerOther {
   display: flex;
-  background-color: var(--b2);
+  background-color: var(--b1);
   justify-content: space-around;
   align-items: center;
   align-content: center;
@@ -467,7 +469,8 @@ header {
   border-radius: 10px;
   flex-direction: row;
   padding: 24px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19); }
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+  color: white; }
   .btn-registerOther p {
     display: flex;
     justify-content: space-around;
@@ -479,7 +482,7 @@ header {
 
 .btn-registerOther:hover {
   display: flex;
-  background-color: var(--b2);
+  background-color: var(--b6);
   justify-content: space-around;
   align-items: center;
   align-content: center;
@@ -490,7 +493,8 @@ header {
   border-radius: 10px;
   flex-direction: row;
   padding: 24px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+  color: black; }
 
 .title-form {
   display: flex;
