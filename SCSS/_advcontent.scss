@@ -1,4 +1,18 @@
 .mainadvice {
+  width: 90%;
+  background-color: #ffffff;
+  height: 88vh;
+  margin: 32px auto 16px auto;
+  box-shadow: 0 2px 4px 0px rgba(78, 55, 55, 0.2);
+  border-radius: 10px;
+  padding: 64px 32px;
+  padding-top: 64px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  animation: fadeInLeft;
+  animation-duration: 2s;
+
   img {
     width: 40%;
     border-radius: 6px;

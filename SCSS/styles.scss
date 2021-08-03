@@ -3,7 +3,6 @@
   --b1: #000000;
   --b2: #ffffff;
   --b3: #c4c7f2;
-  --b4: #020202;
   --b5: #f7bcb8;
   --b6: #fcfcfc;
 }
@@ -27,11 +26,12 @@ a {
 }
 /*nav */
 @import "navigation";
-
+@import "advcontent";
 /* caorusel */
 @import "carousel";
 /*footer */
-@import "_infomain";
+@import "footer";
+@import "infomain";
 /*cards*/
 @import "cards";
 

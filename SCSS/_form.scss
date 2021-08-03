@@ -8,16 +8,17 @@
   border-radius: 10px;
   padding: 32px;
   margin: 0 auto;
-}
-.containerForm a {
-  color: black;
-  text-decoration: none;
+
+  a {
+    color: rgb(41, 139, 130);
+    text-decoration: none;
+  }
 }
 
 .formContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
   width: 90%;
@@ -26,8 +27,13 @@
   padding: 64px;
   margin: 32px;
   border-radius: 10px;
-  background-color: #b7b7e4;
+  background-color: var(--b2);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+
+  .itemRegisterContainer,
+  .itemLogContainer {
+    margin: 32px;
+  }
 }
 
 .containerItem {
@@ -67,7 +73,7 @@
 }
 .btn-registerOther {
   display: flex;
-  background-color: var(--b2);
+  background-color: var(--b1);
   justify-content: space-around;
   align-items: center;
   align-content: center;
@@ -79,10 +85,24 @@
   flex-direction: row;
   padding: 24px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+
+  p {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+
+    margin: 0px;
+
+    padding: 24px;
+  }
 }
 .btn-registerOther:hover {
   display: flex;
-  background-color: var(--b2);
+  background-color: var(--b6);
   justify-content: space-around;
   align-items: center;
   align-content: center;
@@ -94,18 +114,7 @@
   flex-direction: row;
   padding: 24px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-}
-.btn-registerOther p {
-  display: flex;
-
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  width: 100%;
-
-  margin: 0px;
-
-  padding: 24px;
+  color: black;
 }
 
 .title-form {

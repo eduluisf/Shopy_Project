@@ -40,13 +40,13 @@
   justify-content: space-around;
   margin: 0 32px;
   top: 0;
-}
 
-.headerTable tr {
-  margin: 32px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+  tr {
+    margin: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .template-cartContaineritem .template-cart {

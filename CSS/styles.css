@@ -4,7 +4,6 @@
   --b1: #000000;
   --b2: #ffffff;
   --b3: #c4c7f2;
-  --b4: #020202;
   --b5: #f7bcb8;
   --b6: #fcfcfc; }
 
@@ -162,6 +161,46 @@ header {
 .buscador .searchButton {
   width: 90%; }
 
+.mainadvice {
+  width: 90%;
+  background-color: #ffffff;
+  height: 88vh;
+  margin: 32px auto 16px auto;
+  box-shadow: 0 2px 4px 0px rgba(78, 55, 55, 0.2);
+  border-radius: 10px;
+  padding: 64px 32px;
+  padding-top: 64px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  animation: fadeInLeft;
+  animation-duration: 2s; }
+  .mainadvice img {
+    width: 40%;
+    border-radius: 6px;
+    margin: 32px; }
+  .mainadvice .btn {
+    width: 40%;
+    margin: 32px; }
+  .mainadvice .mainAdvContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    padding: 64px; }
+    .mainadvice .mainAdvContent .textAdviceContainer {
+      display: flex;
+      flex-direction: column;
+      width: 50%; }
+      .mainadvice .mainAdvContent .textAdviceContainer p {
+        margin: 16px 32px; }
+      .mainadvice .mainAdvContent .textAdviceContainer h3 {
+        margin: 16px 32px;
+        font-size: 32px; }
+        .mainadvice .mainAdvContent .textAdviceContainer h3 span {
+          color: orange; }
+
 /* caorusel */
 .containerCarousel {
   width: 90%;
@@ -181,6 +220,31 @@ header {
   border-radius: 15px; }
 
 /*footer */
+.inf-Footer {
+  position: absolute;
+  margin: 32px 0px 0px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px;
+  overflow: hidden; }
+
+.containerCard {
+  display: grid;
+  width: 50%;
+  justify-content: space-around;
+  margin: 32px 0px 32px 8rem; }
+  .containerCard .infContainer {
+    color: black; }
+  .containerCard .netContainer .list-footer {
+    color: black;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 50% 50%;
+    column-gap: 32px;
+    grid-template-rows: 100px;
+    font-size: 24px; }
+
 .containerinfomain {
   display: flex;
   flex-direction: row;
@@ -221,6 +285,8 @@ header {
     align-items: center;
     justify-content: space-around;
     align-items: flex-end; }
+  .containerinfomain .btn {
+    width: 40%; }
 
 /*cards*/
 .containerrow {
@@ -247,6 +313,16 @@ header {
   padding: 32px;
   margin: 16px 0;
   width: 250px; }
+  .card img {
+    margin: 0px auto;
+    width: 60%;
+    border-radius: 10%;
+    height: 50%; }
+  .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; }
 
 .card:hover {
   display: flex;
@@ -255,18 +331,6 @@ header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   transform: translateY(-10px); }
-
-.card img {
-  margin: 0px auto;
-  width: 60%;
-  border-radius: 10%;
-  height: 50%; }
-
-.card .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center; }
 
 .btn-dark {
   border-radius: 25px;
@@ -320,12 +384,11 @@ header {
   justify-content: space-around;
   margin: 0 32px;
   top: 0; }
-
-.headerTable tr {
-  margin: 32px;
-  width: 100%;
-  display: flex;
-  flex-direction: row; }
+  .headerTable tr {
+    margin: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
 
 .template-cartContaineritem .template-cart {
   margin: 0px; }
@@ -340,15 +403,14 @@ header {
   border-radius: 10px;
   padding: 32px;
   margin: 0 auto; }
-
-.containerForm a {
-  color: black;
-  text-decoration: none; }
+  .containerForm a {
+    color: #298b82;
+    text-decoration: none; }
 
 .formContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
   width: 90%;
@@ -357,8 +419,11 @@ header {
   padding: 64px;
   margin: 32px;
   border-radius: 10px;
-  background-color: #b7b7e4;
+  background-color: var(--b2);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); }
+  .formContainer .itemRegisterContainer,
+  .formContainer .itemLogContainer {
+    margin: 32px; }
 
 .containerItem {
   width: 100%; }
@@ -393,7 +458,7 @@ header {
 
 .btn-registerOther {
   display: flex;
-  background-color: var(--b2);
+  background-color: var(--b1);
   justify-content: space-around;
   align-items: center;
   align-content: center;
@@ -404,11 +469,20 @@ header {
   border-radius: 10px;
   flex-direction: row;
   padding: 24px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19); }
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+  color: white; }
+  .btn-registerOther p {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin: 0px;
+    padding: 24px; }
 
 .btn-registerOther:hover {
   display: flex;
-  background-color: var(--b2);
+  background-color: var(--b6);
   justify-content: space-around;
   align-items: center;
   align-content: center;
@@ -419,16 +493,8 @@ header {
   border-radius: 10px;
   flex-direction: row;
   padding: 24px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); }
-
-.btn-registerOther p {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  width: 100%;
-  margin: 0px;
-  padding: 24px; }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+  color: black; }
 
 .title-form {
   display: flex;
@@ -544,7 +610,6 @@ header {
     padding: 0;
     background-color: var(--b1);
     position: fixed;
-    margin: 64px;
     left: 0px;
     top: 64px;
     border-bottom: solid 1px var(--b4);
