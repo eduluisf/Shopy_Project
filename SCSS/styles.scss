@@ -1,0 +1,53 @@
+:root {
+  font-size: 16px;
+  --b1: #000000;
+  --b2: #ffffff;
+  --b3: #c4c7f2;
+  --b4: #020202;
+  --b5: #f7bcb8;
+  --b6: #fcfcfc;
+}
+body {
+  background-color: var(--b2);
+  font-family: "Montserrat", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.menu_container,
+ul,
+a {
+  list-style: none;
+}
+/*nav */
+@import "navigation";
+
+/* caorusel */
+@import "carousel";
+/*footer */
+@import "_infomain";
+/*cards*/
+@import "cards";
+
+/*Carrito de comprasretractil*/
+@import "cart";
+
+/*Estilos del forumlario */
+
+@import "form";
+
+/*Filters*/
+@import "filter";
+
+/*Media querys*/
+
+@import "mq376";
+@import "mq768";
+@import "mq1024";
+@import "mq1200";

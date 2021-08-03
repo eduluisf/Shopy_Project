@@ -1,0 +1,47 @@
+.containerinfomain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background-color: white;
+  max-width: 90%;
+  margin: 16px auto;
+  height: 40vh;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 8px 16px;
+  animation: fadeInRight;
+  animation-duration: 2.08s;
+
+  .containerInfoimg {
+    width: 25%;
+    height: 100%;
+    margin: 0;
+    border-radius: 50%;
+    padding: 0px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .containerInfoText {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 90%;
+    padding: 16px;
+    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .containerInfoTextRight {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 90%;
+    padding: 16px;
+    align-items: center;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+}

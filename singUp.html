@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPY</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/27d77282d9.js" crossorigin="anonymous"></script>
+   
+   
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<header>
+  <div class="navigation">
+       <div class="logoContainer">                            
+        <a href="index.html">
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i>   
+       </a>   
+         <p>SHOPY</p>
+      </div>
+      
+      <ul class="navContainer">       
+             <li>
+                 <div class="buscador">
+                      <div  class="filterbtn">
+                      <i class="fas fa-filter"></i>
+                       </div>
+                      <input class="searchButton" type="text" placeholder="Search.">
+                      <div  class="searchbtn">
+                      <i class="fas fa-search"></i>
+                     </div>
+                 </div>
+              </li>           
+                <div  class="hamb-menu">          
+                  <i class="fas fa-bars"></i>
+                </div>          
+            </li>   
+             <li  class="userContainer" >                 
+              <ul id="menu_visible"  class="menu_container menu_visible" >
+                  <li class="userItem"> <a href="index.html">HOME</a> </li>
+                  <li class="userItem"> <a href="men.html">MEN</a> </li>
+                  <li class="userItem"> <a href="women.html">WOMEN</a> </li>          
+                  <li class="userItem"  >  <a href="#"> <i class="fas fa-shopping-cart"></i></a></li>
+                  <li class="userItem" >  <a href="log-in.html"><i class="fas fa-user"></i></a> </li>                       
+              </ul>
+             </li>
+      </ul>
+  </div>
+
+</header>
+    <h1 class="contact-name">CREA TU CUENTA DE SHOPY AQUI  </h1>
+    <section class="containerForm">    
+      <article class="formContainer">
+        <form class="formItems" id="formRegister">
+          <div class="title-form">
+            <h2>Create account</h2>
+          </div>
+          <div class="containerItem">
+            <input class="Itemform" type="text" id="name" placeholder="Name" />
+          </div>
+          <div class="containerItem">
+            <input
+              class="Itemform"
+              type="text"
+              id="email"
+              placeholder="email"
+            />
+          </div>
+          <div class="containerItem">
+            <input
+              class="Itemform"
+              type="password"
+              id="password"
+              placeholder="password"
+            />
+          </div>
+          <div class="containerItem">
+            <input class="btn-submit" type="submit" />
+          </div>
+        </form>
+        <a href="log-in.html">¿Ya tienes cuenta? inicia sesion aqui </a>
+      </article>     
+    
+    <div class="formContainer">
+      <h2 class="title-form">Use your email</h2>
+      <form class="formItems" id="formLogin">  
+        <div class="containerItem">     
+        <div class="btn-registerOther">
+          <i class="fab fa-google"></i>
+          <p>Log in wit google</p>
+        </div>        
+        <div class="btn-registerOther">
+          <i class="fab fa-facebook"></i>
+          <p>Log in wit facebook</p>
+        </div>        
+        <div class="btn-registerOther">
+          <i class="fab fa-instagram"></i>
+          <p>Log in wit instagram</p>
+        </div>    
+    </section>
+    <script src="scripts/form.js"></script>
+  </body>
+</html>

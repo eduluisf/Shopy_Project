@@ -1,0 +1,31 @@
+.inf-Footer {
+  position: absolute;
+  margin: 32px 0px 0px;
+
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px;
+  overflow: hidden;
+}
+
+.containerCard {
+  display: grid;
+  width: 50%;
+
+  justify-content: space-around;
+  margin: 32px 0px 32px 8rem;
+}
+.containerCard .infContainer {
+  color: white;
+}
+
+.containerCard .netContainer .list-footer {
+  color: black;
+  display: grid;
+  align-content: center;
+  grid-template-columns: 50% 50%;
+  column-gap: 32px;
+  grid-template-rows: 100px;
+  font-size: 24px;
+}

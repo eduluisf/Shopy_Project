@@ -1,0 +1,54 @@
+.tableContainer {
+  position: fixed;
+  left: 60%;
+  margin: 0px;
+  background: var(--b6);
+  width: 40%;
+  height: vh;
+  border-radius: 10px 0px 0px 10px;
+  transition: left 0.4s;
+  border: 1px solid rgba(0, 0, 0, 0);
+  z-index: 3;
+  padding: 0;
+  top: 8vh;
+}
+
+.table_visible {
+  left: 100%;
+}
+
+#btn-more {
+  color: white;
+  background-color: var(--b1);
+  border: none;
+}
+
+#btn-less,
+#emptyCart {
+  background-color: var(--b4);
+  border: none;
+}
+
+.headerCart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.headerTable {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 32px;
+  top: 0;
+}
+
+.headerTable tr {
+  margin: 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.template-cartContaineritem .template-cart {
+  margin: 0px;
+}

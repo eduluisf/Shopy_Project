@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPY</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <script src="https://kit.fontawesome.com/27d77282d9.js" crossorigin="anonymous"></script>
+   
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+  <!-- Loading-enproceso -->
+  <div class="loading-container">
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+    <!-- navigation -->
+
+    <header>
+
+
+      <div class="navigation">
+           <div class="logoContainer">
+                                
+            <a href="index.html">
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i>    
+  
+            </a>          
+        <p>SHOPY</p>
+          </div>
+          
+          <ul class="navContainer"> 
+              
+      
+                  <li class="userContainerBuscador">
+                     <div class="buscador">
+                          <div  class="filterbtn">
+                          <i class="fas fa-filter"></i>
+                     </div>
+                          <input class="searchButton" type="text" placeholder="Search.">
+                     <div  class="searchbtn">
+                          <i class="fas fa-search"></i>
+                         </div>
+                     </div>
+                  </li>
+               
+                  <div       class="hamb-menu">
+              
+                      <i class="fas fa-bars"></i>
+                    </div>
+              
+                </li>
+         
+  
+                   <li  class="userContainer" >                 
+                     <ul id="menu_visible"  class="menu_container menu_visible" >
+                      <li class="userItem"> <a href="index.html">HOME</a> </li>
+                      <li class="userItem"> <a href="men.html">MEN</a> </li>
+                      <li class="userItem"> <a href="women.html">WOMEN</a> </li>          
+                      <li class="userItem buttonCart"  >  <a href="#"> <i class="fas fa-shopping-cart"></i></a></li>
+                      <li class="userItem" >  <a href="log-in.html"><i class="fas fa-user"></i></a> </li>                       
+                    </ul>
+                   </li>
+          </ul>
+      </div>
+   </header>
+   
+   <!-- Tabla -->
+   <table  id="tableCart" class="table  tableContainer table_visible">  
+     <!-- Tabla header -->
+     <thead>
+       <tr>
+         <th scope="col">#</th>
+         <th scope="col">Item</th>
+         <th scope="col">Cantidad</th>
+         <th scope="col">Acción</th>
+         <th scope="col">Total</th>
+        </tr>
+      </thead>
+      <!-- table body -->
+      <tbody id="items"></tbody>
+      <!-- table footer -->
+      <tfoot>
+        <tr id="footer">
+          <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+        </tr>
+      </tfoot>
+    </table>
+    
+    
+
+      <div id="" class="containerCarousel">
+        <dic class="row">
+          <div class="col-sm-12">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/slide2.jpg" class="d-block w-100 h-100" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                      
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/slide3.jpg" class="d-block w-100 h-100" alt="..." >
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item ">
+                    <img src="assets/slide1.jpg" class="d-block w-100 h-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+</div>
+
+<div class="mainadvice">   
+  <div class="animate__backInLeft mainAdvContent">        
+    <div class="textAdviceContainer">
+      <h3><span>30%</span> SALE OFF </h3>
+      <P>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus adipisci delectus eaque, nisi, possimus rem, quo et sequi id ut atque veritatis maiores velit dignissimos aspernatur alias quos neque accusamus.
+      </P>   
+      <button class="btn btn-dark">Conocer mas</button>
+    </div>        
+    <img src="assets/20944108.jpg" alt="">        
+  </div>     
+</div>
+
+<div class="containerinfomain">  
+        <img class="containerInfoimg" src="assets/img_woman_1.jpg" alt="">
+  <div class="containerInfoTextRight">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam assumenda minus nemo, sapiente, laborum reprehenderit, earum saepe quam totam eligendi beatae. Dolorem maxime illum minus debitis facere sit qui. Modi?</p>
+        <button class="btn btn-dark">Conocer mas</button>
+  </div>
+
+
+
+
+</div>
+
+
+<div class="container containerMain">
+  <div class="row " id="cards"></div>
+</div>    
+
+
+<div>
+
+
+</div>
+<div class="containerinfomain">
+ 
+  <div class="containerInfoText">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam assumenda minus nemo, sapiente, laborum reprehenderit, earum saepe quam totam eligendi beatae. Dolorem maxime illum minus debitis facere sit qui. Modi?</p>
+
+    <button class="btn btn-dark">Conocer mas</button>
+  </div>
+
+    <img class="containerInfoimg" src="assets/img_woman_1.jpg" alt="">
+
+
+</div>
+
+
+
+
+
+       <footer>
+      <div class="inf-Footer">        
+          <div class="containerCard">
+              <div class="infContainer"> 
+                <p class="city-footer">
+                  Medellín,Colombia <br />
+                  2021
+                </p>
+              </div>
+          </div>       
+      <div class="containerCard">        
+          <div class="netContainer">
+            <ul class="list-footer">
+              <li>
+                  <i class="fab fa-instagram"></i>
+              </li>              
+              <li>
+                <i class="fab fa-facebook-messenger"></i>
+              </li>           
+            </ul>            
+          </div>
+      </div>
+    </div>
+</footer>
+
+<!-- template -->
+<template id="template-footer">
+  <th scope="row" colspan="2">Total productos</th>
+  <td>10</td>
+  <td>
+      <button class="btn btn-danger btn-sm" id="emptyCart">
+          vaciar todo
+      </button>
+
+      <button class="btn btn-danger btn-sm" id="buyCart">
+      Comprar
+    </button>
+  </td>
+  <td class="font-weight-bold">$ <span>5000</span></td>
+</template>
+
+
+<template id="template-cart">
+<tr>
+  <th scope="row">id</th>
+  <img src="" alt="">
+  <td>Café</td>
+  <td>1</td>
+  <td>
+      <button id="btn-more" class="btn btn-info btn-sm">
+          +
+      </button>
+      <button id="btn-less" class="btn btn-danger btn-sm">
+          -
+      </button>
+  </td>
+  <td>$ <span>500</span></td>
+</tr>
+</template>
+
+<template id="template-card">
+  <div class="col-lg-4  col-md-6 col-xl-3" >
+    <div class="card" style="width:18rem; padding:4px; margin:8px 0px;" >
+
+    
+      
+      <div class="card-body">
+        <img src="" alt="" class="card-img-top">
+        <h5>Titulo</h5>
+        <p>precio</p>
+        <button class="btn btn-dark">Comprar</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<!-- scripts, js, boostrap  -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="scripts/cart.js"></script>
+
+
+</body>
+</html>

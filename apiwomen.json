@@ -1,0 +1,99 @@
+[
+  {
+    "precio": 600,
+    "id": 1,
+    "title": "Woman Tshirt black",
+    "thumbnailUrl": "assets/img_woman_1.jpg"
+  },
+  {
+    "precio": 500,
+    "id": 2,
+    "title": "Woman Tshirt fresh",
+    "thumbnailUrl": "assets/img_woman_2.jpg"
+  },
+  {
+    "precio": 500,
+    "id": 3,
+    "title": "Freestyle tshirt",
+    "thumbnailUrl": "assets/img_woman_3.jpg"
+  },
+
+  {
+    "precio": " 550",
+    "id": 4,
+    "title": "Paris vibes tshirt",
+    "thumbnailUrl": "assets/img_woman_4.jpg"
+  },
+  {
+    "precio": 600,
+    "id": 1,
+    "title": "Home tshirt",
+    "thumbnailUrl": "assets/img_woman_5.jpg"
+  },
+  {
+    "precio": 500,
+    "id": 2,
+    "title": "T-SHIRT yellow",
+    "thumbnailUrl": "assets/tshirt-yellow.png"
+  },
+  {
+    "precio": 500,
+    "id": 3,
+    "title": "T-SHIRT blue",
+    "thumbnailUrl": "assets/tshirt-blue.png"
+  },
+  {
+    "precio": 600,
+    "id": 1,
+    "title": "T-SHIRT black",
+    "thumbnailUrl": "assets/img_woman_5.jpg"
+  },
+  {
+    "precio": 550,
+    "id": 4,
+    "title": "T-SHIRT green",
+    "thumbnailUrl": "assets/tshirt-green.png"
+  },
+
+  {
+    "precio": 550,
+    "id": 4,
+    "title": "T-SHIRT green",
+    "thumbnailUrl": "assets/tshirt-green.png"
+  },
+
+  {
+    "precio": 550,
+    "id": 4,
+    "title": "T-SHIRT green",
+    "thumbnailUrl": "assets/tshirt-green.png"
+  },
+
+  {
+    "precio": 550,
+    "id": 4,
+    "title": "T-SHIRT green",
+    "thumbnailUrl": "assets/tshirt-green.png"
+  },
+
+  {
+    "precio": 550,
+    "id": 4,
+    "title": "T-SHIRT green",
+    "thumbnailUrl": "assets/tshirt-green.png"
+  },
+
+  {
+    "precio": 550,
+    "id": 4,
+    "title": "T-SHIRT green",
+    "thumbnailUrl": "assets/tshirt-green.png"
+  },
+
+  {
+    "precio": 500,
+    "id": 3,
+    "title": "T-SHIRT xxx",
+    "thumbnailUrl": "assets/img_woman_3.jpg"
+  }
+]
