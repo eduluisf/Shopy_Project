@@ -1,12 +1,10 @@
 .containerForm {
   display: flex;
   flex-direction: row;
-
-  width: 90%;
+  width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border-radius: 10px;
-  padding: 32px;
   margin: 0 auto;
 
   a {
@@ -21,110 +19,124 @@
   justify-content: space-around;
   align-items: center;
   align-content: center;
-  width: 90%;
-  height: 60vh;
-  margin: 0;
-  padding: 64px;
-  margin: 32px;
-  border-radius: 10px;
-  background-color: var(--b2);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-
-  .itemRegisterContainer,
-  .itemLogContainer {
-    margin: 32px;
-  }
-}
-
-.containerItem {
   width: 100%;
-}
+  height: 97vh;
+  margin: 32px 0px 0px 0px;
 
-.Itemform {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
-  background-color: #faf5ca;
-  width: 100%;
-  height: 50px;
-  border: none;
-  margin: 16px;
-  border-radius: 10px;
-  padding: 8px;
-}
-
-.btn-submit {
-  background-color: var(--b2);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
-
-  width: 100%;
-  height: 50px;
-  border: none;
-  margin: 16px;
-  border-radius: 10px;
-}
-.btn-submit:hover {
-  background-color: var(--b2);
-
-  width: 100%;
-  height: 50px;
-  border: none;
-  margin: 16px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-}
-.btn-registerOther {
-  display: flex;
-  background-color: var(--b1);
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  width: 100%;
-  height: 0.5vh;
-  border: none;
-  margin: 16px;
-  border-radius: 10px;
-  flex-direction: row;
-  padding: 24px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
-  color: white;
-
-  p {
+  .formContainerLeft {
     display: flex;
-
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    align-content: center;
+    align-content: flex-start;
+    justify-content: center;
     width: 100%;
+    height: 10vh;
 
-    margin: 0px;
+    .textContetTitle {
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin: 0px 0px 0px 0px;
+      padding: 0px 0px 0px;
 
-    padding: 24px;
+      h2 {
+        margin: 16px 0;
+        padding: 0;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .btn-registerOther {
+      display: flex;
+
+      justify-content: space-around;
+      align-items: center;
+      align-content: center;
+      width: 100%;
+      height: 5vh;
+      margin: 16px 0px;
+      border-radius: 25px;
+      flex-direction: row;
+      padding: 24px;
+      color: black;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+        0 4px 8px 0 rgba(0, 0, 0, 0.19);
+      border: 1px solid rgb(146, 146, 146);
+
+      p {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        margin: 0px;
+        padding: 24px;
+      }
+    }
+
+    .btn-registerOther:hover {
+      background-color: var(--b6);
+
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 4px 8px 0 rgba(0, 0, 0, 0.19);
+      color: black;
+    }
+
+    .itemRegisterContainer {
+    }
+
+    .itemLogContainer {
+      margin: 0;
+
+      .formItems {
+        margin: 0;
+        .containerItem {
+          width: 100%;
+          .Itemform {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            border: 1px solid rgb(146, 146, 146);
+            border-radius: 25px;
+            padding: 8px 16px;
+            margin: 16px 0px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+              0 4px 8px 0 rgba(0, 0, 0, 0.19);
+          }
+        }
+      }
+      .btn-submit {
+        background-color: var(--b1);
+        width: 100%;
+        height: 50px;
+        border: 1px solid rgb(146, 146, 146);
+        margin: 16px auto;
+        border-radius: 25px;
+        color: white;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+          0 4px 8px 0 rgba(0, 0, 0, 0.19);
+      }
+      .btn-submit:hover {
+        background-color: var(--b2);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 4px 8px 0 rgba(0, 0, 0, 0.19);
+        color: black;
+      }
+    }
+  }
+  .formContainerRigth {
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    margin: 0;
   }
 }
-.btn-registerOther:hover {
-  display: flex;
-  background-color: var(--b6);
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  width: 100%;
-  height: 0.5vh;
-  border: none;
-  margin: 16px;
-  border-radius: 10px;
-  flex-direction: row;
-  padding: 24px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-  color: black;
-}
 
-.title-form {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  width: 100%;
-  margin: 32px 16px 16px 16px;
-}
 .contact-name {
   margin: 24px;
   display: flex;

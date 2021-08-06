@@ -19,24 +19,26 @@ header {
   z-index: 3;
   margin: 0;
   padding: 0;
-}
-.navigation .navContainer {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  list-style: none;
-  justify-content: space-around;
-  margin: 0;
-  overflow: hidden;
+
+  .navContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+    overflow: hidden;
+
+    li {
+      display: flex;
+      justify-content: space-around;
+      font-size: 22px;
+
+      overflow: hidden;
+    }
+  }
 }
 
-.navigation .navContainer li {
-  display: flex;
-  justify-content: space-around;
-  font-size: 22px;
-
-  overflow: hidden;
-}
 .hamb-menu {
   display: none;
 }
@@ -45,22 +47,24 @@ header {
   display: flex;
   flex-direction: row;
   margin: 0 16px 0 32px;
+
+  a {
+    display: flex;
+    font-size: 24px;
+    color: var(--b4);
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: var(--b4);
+    margin: 0 32px;
+  }
 }
-.logoContainer a {
-  display: flex;
-  font-size: 24px;
-  color: var(--b4);
-  justify-content: space-around;
-  align-items: center;
-  margin: 0px;
-}
-.logoContainer p {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  color: var(--b4);
-  margin: 0 32px;
-}
+
 .buscador {
   display: flex;
   justify-content: space-around;
@@ -69,78 +73,84 @@ header {
   padding: 4px 0px;
   margin: 0;
   width: 250vh;
+
+  .filterbtn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    background-color: var(--b1);
+    color: WHITE;
+    font-size: 14px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.2),
+      0 2px 4px 0 rgba(172, 172, 172, 0.2);
+  }
+  .searchbtn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    background-color: var(--b1);
+    color: white;
+    font-size: 14px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.2),
+      0 2px 4px 0 rgba(172, 172, 172, 0.2);
+  }
+
+  .iconContainer i {
+    margin: 8px;
+  }
+
+  .searchButton {
+    width: 300%;
+    border: none;
+    height: 36px;
+    padding: 16px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.2),
+      0 2px 4px 0 rgba(172, 172, 172, 0.2);
+  }
 }
 
-.buscador .filterbtn {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 36px;
-  width: 36px;
-  background-color: var(--b1);
-  color: WHITE;
-  font-size: 14px;
-  border-radius: 10px 0 0 10px;
-  box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.2),
-    0 2px 4px 0 rgba(172, 172, 172, 0.2);
+.navigation {
+  .navContainer {
+    .userContainer {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      font-size: 16px;
+      align-items: center;
+      align-content: center;
+      padding: 0;
+    }
+    .menu_container {
+      display: flex;
+
+      .userItem {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+
+        a {
+          color: black;
+          margin: 0px 12px;
+          text-decoration: none;
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
-.buscador .searchbtn {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 36px;
-  width: 36px;
-  background-color: var(--b1);
-  color: white;
-  font-size: 14px;
-  border-radius: 0 10px 10px 0;
-  box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.2),
-    0 2px 4px 0 rgba(172, 172, 172, 0.2);
-}
-.buscador .iconContainer i {
-  margin: 8px;
-}
-.buscador .searchButton {
-  width: 300%;
-  border: none;
-  height: 36px;
-  padding: 16px;
-  font-size: 14px;
-  box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.2),
-    0 2px 4px 0 rgba(172, 172, 172, 0.2);
-}
-.navigation .navContainer .userContainer {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  font-size: 16px;
-  align-items: center;
-  align-content: center;
-  padding: 0;
-}
-.navigation .navContainer .userContainer .menu_container {
-  display: flex;
-}
-.navigation .navContainer .userContainer .menu_container .userItem {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-}
-.navigation .navContainer .userContainer .menu_container .userItem a {
-  color: black;
-  margin: 0px 12px;
-  text-decoration: none;
-  font-size: 16px;
-}
+
 .navigation .navContainer .userContainer .menu_container .userItem:hover {
-  width: 50%;
-  color: black;
-  opacity: 0.6;
   border-radius: 25px;
-  background-color: var(--b2);
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
 }
 
 .buscador .searchButton {
