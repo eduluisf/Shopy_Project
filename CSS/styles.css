@@ -400,88 +400,99 @@ header {
   align-content: center;
   width: 100%;
   height: 97vh;
-  margin: 32px 0px 0px 0px; }
-  .formContainer .formContainerLeft {
+  margin: 0; }
+
+.formContainerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin: 72px 0px 0px 0px; }
+  .formContainerLeft .textContetTitle {
     display: flex;
     flex-direction: column;
-    align-items: center;
     align-content: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 10vh; }
-    .formContainer .formContainerLeft .textContetTitle {
-      display: flex;
-      flex-direction: column;
-      align-content: flex-start;
-      align-items: flex-start;
-      justify-content: flex-start;
-      margin: 0px 0px 0px 0px;
-      padding: 0px 0px 0px; }
-      .formContainer .formContainerLeft .textContetTitle h2 {
-        margin: 16px 0;
-        padding: 0; }
-      .formContainer .formContainerLeft .textContetTitle p {
-        margin: 0;
-        padding: 0; }
-    .formContainer .formContainerLeft .btn-registerOther {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px; }
+    .formContainerLeft .textContetTitle h2 {
+      margin: 16px 0;
+      padding: 0; }
+    .formContainerLeft .textContetTitle p {
+      margin: 0;
+      padding: 0; }
+  .formContainerLeft .btn-registerOther {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 120%;
+    height: 5vh;
+    margin: 16px 0px;
+    border-radius: 25px;
+    flex-direction: row;
+    padding: 24px;
+    color: black;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid #929292; }
+    .formContainerLeft .btn-registerOther p {
       display: flex;
       justify-content: space-around;
       align-items: center;
       align-content: center;
       width: 100%;
-      height: 5vh;
-      margin: 16px 0px;
-      border-radius: 25px;
-      flex-direction: row;
-      padding: 24px;
-      color: black;
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-      border: 1px solid #929292; }
-      .formContainer .formContainerLeft .btn-registerOther p {
+      margin: 0px;
+      padding: 24px; }
+  .formContainerLeft .btn-registerOther:hover {
+    background-color: var(--b6);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    color: black; }
+  .formContainerLeft .itemLogContainer {
+    margin: 0; }
+    .formContainerLeft .itemLogContainer .formItems {
+      margin: 0; }
+      .formContainerLeft .itemLogContainer .formItems .containerItem {
+        width: 100%; }
+        .formContainerLeft .itemLogContainer .formItems .containerItem .Itemform {
+          display: flex;
+          width: 120%;
+          height: 50px;
+          border: 1px solid #929292;
+          border-radius: 25px;
+          padding: 8px 16px;
+          margin: 16px 0px;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); }
+      .formContainerLeft .itemLogContainer .formItems .footerLogin {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        align-content: center;
-        width: 100%;
-        margin: 0px;
-        padding: 24px; }
-    .formContainer .formContainerLeft .btn-registerOther:hover {
-      background-color: var(--b6);
+        flex-direction: row;
+        justify-content: space-between; }
+    .formContainerLeft .itemLogContainer .btn-submit {
+      background-color: var(--b1);
+      width: 100%;
+      height: 50px;
+      border: 1px solid #929292;
+      margin: 16px 14px;
+      border-radius: 25px;
+      color: white;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); }
+    .formContainerLeft .itemLogContainer .btn-submit:hover {
+      background-color: var(--b2);
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
       color: black; }
-    .formContainer .formContainerLeft .itemLogContainer {
-      margin: 0; }
-      .formContainer .formContainerLeft .itemLogContainer .formItems {
-        margin: 0; }
-        .formContainer .formContainerLeft .itemLogContainer .formItems .containerItem {
-          width: 100%; }
-          .formContainer .formContainerLeft .itemLogContainer .formItems .containerItem .Itemform {
-            display: flex;
-            width: 100%;
-            height: 50px;
-            border: 1px solid #929292;
-            border-radius: 25px;
-            padding: 8px 16px;
-            margin: 16px 0px;
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); }
-      .formContainer .formContainerLeft .itemLogContainer .btn-submit {
-        background-color: var(--b1);
-        width: 100%;
-        height: 50px;
-        border: 1px solid #929292;
-        margin: 16px auto;
-        border-radius: 25px;
-        color: white;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); }
-      .formContainer .formContainerLeft .itemLogContainer .btn-submit:hover {
-        background-color: var(--b2);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-        color: black; }
-  .formContainer .formContainerRigth {
+
+.formContainerRigth {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+  .formContainerRigth .formContainerRigthContent img {
     width: 100%;
-    height: 100vh;
-    background-color: red;
-    margin: 0; }
+    height: 103vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); }
 
 .contact-name {
   margin: 24px;

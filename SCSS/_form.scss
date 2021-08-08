@@ -21,119 +21,131 @@
   align-content: center;
   width: 100%;
   height: 97vh;
-  margin: 32px 0px 0px 0px;
+  margin: 0;
+}
+.formContainerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin: 72px 0px 0px 0px;
 
-  .formContainerLeft {
+  .textContetTitle {
     display: flex;
     flex-direction: column;
-    align-items: center;
     align-content: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 10vh;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px;
 
-    .textContetTitle {
-      display: flex;
-      flex-direction: column;
-      align-content: flex-start;
-      align-items: flex-start;
-      justify-content: flex-start;
-      margin: 0px 0px 0px 0px;
-      padding: 0px 0px 0px;
-
-      h2 {
-        margin: 16px 0;
-        padding: 0;
-      }
-      p {
-        margin: 0;
-        padding: 0;
-      }
+    h2 {
+      margin: 16px 0;
+      padding: 0;
     }
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
 
-    .btn-registerOther {
+  .btn-registerOther {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 120%;
+    height: 5vh;
+    margin: 16px 0px;
+    border-radius: 25px;
+    flex-direction: row;
+    padding: 24px;
+    color: black;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid rgb(146, 146, 146);
+
+    p {
       display: flex;
-
       justify-content: space-around;
       align-items: center;
       align-content: center;
       width: 100%;
-      height: 5vh;
-      margin: 16px 0px;
-      border-radius: 25px;
-      flex-direction: row;
+      margin: 0px;
       padding: 24px;
-      color: black;
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-        0 4px 8px 0 rgba(0, 0, 0, 0.19);
-      border: 1px solid rgb(146, 146, 146);
+    }
+  }
 
-      p {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        align-content: center;
+  .btn-registerOther:hover {
+    background-color: var(--b6);
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+  }
+
+  .itemRegisterContainer {
+  }
+
+  .itemLogContainer {
+    margin: 0;
+
+    .formItems {
+      margin: 0;
+      .containerItem {
         width: 100%;
-        margin: 0px;
-        padding: 24px;
+        .Itemform {
+          display: flex;
+          width: 120%;
+          height: 50px;
+          border: 1px solid rgb(146, 146, 146);
+          border-radius: 25px;
+          padding: 8px 16px;
+          margin: 16px 0px;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+            0 4px 8px 0 rgba(0, 0, 0, 0.19);
+        }
+      }
+
+      .footerLogin {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
       }
     }
-
-    .btn-registerOther:hover {
-      background-color: var(--b6);
-
+    .btn-submit {
+      background-color: var(--b1);
+      width: 100%;
+      height: 50px;
+      border: 1px solid rgb(146, 146, 146);
+      margin: 16px 14px;
+      border-radius: 25px;
+      color: white;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+        0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    }
+    .btn-submit:hover {
+      background-color: var(--b2);
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 4px 8px 0 rgba(0, 0, 0, 0.19);
       color: black;
     }
-
-    .itemRegisterContainer {
-    }
-
-    .itemLogContainer {
-      margin: 0;
-
-      .formItems {
-        margin: 0;
-        .containerItem {
-          width: 100%;
-          .Itemform {
-            display: flex;
-            width: 100%;
-            height: 50px;
-            border: 1px solid rgb(146, 146, 146);
-            border-radius: 25px;
-            padding: 8px 16px;
-            margin: 16px 0px;
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-              0 4px 8px 0 rgba(0, 0, 0, 0.19);
-          }
-        }
-      }
-      .btn-submit {
-        background-color: var(--b1);
-        width: 100%;
-        height: 50px;
-        border: 1px solid rgb(146, 146, 146);
-        margin: 16px auto;
-        border-radius: 25px;
-        color: white;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-          0 4px 8px 0 rgba(0, 0, 0, 0.19);
-      }
-      .btn-submit:hover {
-        background-color: var(--b2);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 4px 8px 0 rgba(0, 0, 0, 0.19);
-        color: black;
-      }
-    }
   }
-  .formContainerRigth {
-    width: 100%;
-    height: 100vh;
-    background-color: red;
-    margin: 0;
+}
+.formContainerRigth {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .formContainerRigthContent {
+    img {
+      width: 100%;
+      height: 103vh;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    }
   }
 }
 
