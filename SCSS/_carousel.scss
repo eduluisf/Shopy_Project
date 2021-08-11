@@ -1,10 +1,10 @@
 .containerCarousel {
   width: 90%;
   margin: 72px auto 8px auto;
-  box-shadow: 0 2px 4px 0px rgba(78, 55, 55, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
-  animation: fadeInLeft;
-  animation-duration: 2.02s;
+  animation: fadeInLeft 2.1s cubic-bezier(0, 0.96, 0.38, 1);
+
   overflow: hidden;
   padding: 0%;
   height: 46vh;
