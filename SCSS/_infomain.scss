@@ -8,11 +8,10 @@
   max-width: 90%;
   margin: 16px auto;
   height: 40vh;
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   padding: 8px 16px;
-  animation: fadeInRight;
-  animation-duration: 2.08s;
+  animation: fadeInLeft 2.1s cubic-bezier(0, 0.96, 0.38, 1);
 
   .containerInfoimg {
     width: 25%;
