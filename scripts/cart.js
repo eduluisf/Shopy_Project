@@ -1,3 +1,5 @@
+// Se toman los items por id
+
 const cards = document.getElementById("cards");
 const items = document.getElementById("items");
 const footer = document.getElementById("footer");
@@ -7,10 +9,13 @@ const templateCart = document.getElementById("template-cart").content;
 
 const templateFooter = document.getElementById("template-footer").content;
 const fragment = document.createDocumentFragment();
-let cart = {};
 
+// seleccion del boton hamburguesa para el uso del responsive
 const navToggle = document.querySelector(".hamb-menu");
 const navMenu = document.querySelector(".menu_container");
+
+// creacion del objeto carro
+let cart = {};
 
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("menu_visible");
@@ -22,6 +27,17 @@ buttonCart.addEventListener("click", () => {
   tableContainer.classList.toggle("table_visible");
 });
 
+// promesa hecha con fectch y uso del metodo showcards para pintar las cards con la llamada del JSON api.json
+
+const fetchData = async () => {
+  try {
+    const res = await fetch("api.json");
+    const data = await res.json();
+    showCards(data);
+  } catch (error) {}
+};
+
+// esperamos a que el contenido se cargue y se ejecutamos la funcion
 document.addEventListener("DOMContentLoaded", () => {
   fetchData();
 
@@ -31,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+//Ejecutamos las funciones a traves de los clicks usando addeventlistener
 cards.addEventListener("click", (e) => {
   addcCart(e);
 });
@@ -39,25 +56,7 @@ items.addEventListener("click", (e) => {
   btnAction(e);
 });
 
-// AlertaCompraRealizada
-
-const alertBuy = () => {
-  Swal.fire({
-    title: "compra realizada",
-    allowOutsideClick: false,
-    stopKeydownPropagation: false,
-  });
-};
-
-const bc = $("#buyCart").on("click", alertBuy());
-
-const fetchData = async () => {
-  try {
-    const res = await fetch("api.json");
-    const data = await res.json();
-    showCards(data);
-  } catch (error) {}
-};
+//Funcion mosttrar cartas
 
 const showCards = (data) => {
   data.forEach((product) => {
@@ -71,6 +70,7 @@ const showCards = (data) => {
   cards.appendChild(fragment);
 };
 
+//Selecciona del item selccionado
 const addcCart = (e) => {
   if (e.target.classList.contains("btn-dark")) {
     setCart(e.target.parentElement);
@@ -79,6 +79,7 @@ const addcCart = (e) => {
   e.stopPropagation();
 };
 
+//Guardamos en un objeto los items tomados de la carta y asignamos una cantidad inical de 1
 const setCart = (obj) => {
   const product = {
     id: obj.querySelector(".btn-dark").dataset.id,
@@ -95,6 +96,7 @@ const setCart = (obj) => {
   showCart();
 };
 
+//Llevamos los datos al carrito
 const showCart = () => {
   items.innerHTML = "";
 
@@ -116,6 +118,7 @@ const showCart = () => {
   localStorage.setItem("carrito", JSON.stringify(cart));
 };
 
+// operaciones del footer y ajustamos la cantidad y el precio total de elementos
 const showFooter = () => {
   footer.innerHTML = "";
   if (Object.keys(cart) == 0) {
@@ -141,6 +144,7 @@ const showFooter = () => {
   fragment.appendChild(clone);
   footer.appendChild(fragment);
 
+  // eliminamos todos los item del carro
   const btnEmptyCart = document.getElementById("emptyCart");
 
   btnEmptyCart.addEventListener("click", () => {
@@ -149,6 +153,7 @@ const showFooter = () => {
   });
 };
 
+// contolador de cantidad en aumento o disminucion en uno por cada click.
 const btnAction = (e) => {
   if (e.target.classList.contains("btn-info")) {
     console.log(cart[e.target.dataset.id]);

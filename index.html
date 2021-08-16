@@ -16,7 +16,7 @@
    
    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-
+   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
@@ -226,22 +226,22 @@
 </template>
 
 
-<template id="template-cart">
-<tr>
-  <th scope="row">id</th>
-  <td>Café</td>
-  <td>1</td>
-  <td>
-      <button id="btn-more" class="btn btn-info btn-sm">
-          +
-      </button>
-      <button id="btn-less" class="btn btn-danger btn-sm">
-          -
-      </button>
-  </td>
-  <td>$ <span>500</span></td>
-</tr>
-</template>
+<template class="template-cartContainer" id="template-cart">
+  <tr class="template-cartContaineritem"  >
+    <th class="template-cart"  scope="row">id</th>
+    <td class="template-cart"  >Café</td>
+    <td class="template-cart"  >1</td>
+    <td class="template-cart"  >
+        <button id="btn-more" class="btn btn-info btn-sm">
+            +
+        </button>
+        <button id="btn-less" class="btn btn-danger btn-sm">
+            -
+        </button>
+    </td>
+    <td class="template-cart">$ <span>500</span></td>
+  </tr>
+  </template>
 
 <template id="template-card">
   <div class="col-lg-4  col-md-6 col-xl-3" >
