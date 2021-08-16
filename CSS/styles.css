@@ -332,12 +332,12 @@ header {
   position: fixed;
   left: 60%;
   margin: 0px;
-  background: var(--b6);
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0);
   width: 40%;
-  height: vh;
+  height: 40vh;
   border-radius: 10px 0px 0px 10px;
   transition: left 0.4s;
-  border: 1px solid rgba(0, 0, 0, 0);
   z-index: 3;
   padding: 0;
   top: 8vh; }
@@ -348,12 +348,20 @@ header {
 #btn-more {
   color: white;
   background-color: var(--b1);
-  border: none; }
+  border: none;
+  border-radius: 25px; }
 
 #btn-less,
 #emptyCart {
-  background-color: var(--b4);
-  border: none; }
+  background-color: var(--b1);
+  opacity: 0.8;
+  border: none;
+  border-radius: 25px; }
+
+#buyCart {
+  background-color: var(--b1);
+  border: none;
+  border-radius: 25px; }
 
 .headerCart {
   display: flex;
@@ -368,8 +376,10 @@ header {
   .headerTable tr {
     margin: 32px;
     width: 100%;
+    height: 1vh;
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    background-color: red; }
 
 .template-cartContaineritem .template-cart {
   margin: 0px; }
@@ -477,6 +487,11 @@ header {
         background-color: var(--b2);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
         color: black; }
+    .formContainerLeft .itemLogContainer P {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
 
 .formContainerRigth {
   width: 100%;
@@ -513,47 +528,52 @@ header {
   padding: 16px auto;
   height: 0vh;
   margin: 0px;
-  align-items: flex-start;
+  align-items: center;
   align-content: center;
-  align-content: center; }
+  justify-content: flex-start;
+  width: 100%; }
 
 .filterItem {
   font-size: 16px;
   display: flex;
-  flex-direction: column;
-  padding: 8px 16px;
+  flex-direction: row;
+  width: 100%;
+  padding: 16px 32px;
   align-items: center;
-  align-content: center; }
+  align-content: center;
+  justify-content: flex-start; }
   .filterItem p {
-    font-size: 14px;
+    width: 100%;
+    font-size: 16px;
     height: 3vh; }
   .filterItem .filterCat {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    align-items: center;
+    align-content: center;
     align-content: space-around;
     margin: 0;
     font-size: 12px; }
   .filterItem .filterPrecio .inputPrice {
     padding: 0;
-    margin: 0 4px; }
+    margin: 0 4px;
+    width: 40%; }
 
 .sliderPrecio {
   width: 100%;
   color: black; }
 
 .inputPrice {
-  width: 30%;
-  margin: 16px; }
+  border-radius: 25px;
+  border: 1px solid black;
+  font-size: 16px; }
 
 .chkboxContainer {
-  margin: 8px; }
+  margin: 4px; }
 
 .filterItem .catfilterit {
   display: flex;
   flex-direction: column;
-  justify-content: space-around; }
+  justify-content: center; }
 
 /*Media querys*/
 @media (max-width: 376px) {

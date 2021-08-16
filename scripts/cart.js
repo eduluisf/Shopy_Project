@@ -4,6 +4,7 @@ const footer = document.getElementById("footer");
 const templateCard = document.getElementById("template-card").content;
 
 const templateCart = document.getElementById("template-cart").content;
+
 const templateFooter = document.getElementById("template-footer").content;
 const fragment = document.createDocumentFragment();
 let cart = {};
@@ -14,11 +15,10 @@ const navMenu = document.querySelector(".menu_container");
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("menu_visible");
 });
-
-const buttonCart = $(".buttonCart");
+const buttonCart = document.querySelector(".buttonCart");
 const tableContainer = document.querySelector(".tableContainer");
 
-buttonCart.on("click", () => {
+buttonCart.addEventListener("click", () => {
   tableContainer.classList.toggle("table_visible");
 });
 
@@ -32,12 +32,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 cards.addEventListener("click", (e) => {
-  addCart(e);
+  addcCart(e);
 });
 
 items.addEventListener("click", (e) => {
   btnAction(e);
 });
+
+// AlertaCompraRealizada
+
+const alertBuy = () => {
+  Swal.fire({
+    title: "compra realizada",
+    allowOutsideClick: false,
+    stopKeydownPropagation: false,
+  });
+};
+
+const bc = $("#buyCart").on("click", alertBuy());
 
 const fetchData = async () => {
   try {
@@ -59,7 +71,7 @@ const showCards = (data) => {
   cards.appendChild(fragment);
 };
 
-const addCart = (e) => {
+const addcCart = (e) => {
   if (e.target.classList.contains("btn-dark")) {
     setCart(e.target.parentElement);
   }
@@ -72,10 +84,8 @@ const setCart = (obj) => {
     id: obj.querySelector(".btn-dark").dataset.id,
     title: obj.querySelector("h5").textContent,
     precio: obj.querySelector("p").textContent,
-    src: obj.querySelector("img").getAttribute("src"),
     cantidad: 1,
   };
-
   if (cart.hasOwnProperty(product.id)) {
     product.cantidad = cart[product.id].cantidad + 1;
   }
@@ -90,13 +100,13 @@ const showCart = () => {
 
   Object.values(cart).forEach((product) => {
     templateCart.querySelector("th").textContent = product.id;
-    templateCart.querySelector("img").setAttribute("src", product.src);
     templateCart.querySelectorAll("td")[1].textContent = product.cantidad;
     templateCart.querySelectorAll("td")[0].textContent = product.title;
     templateCart.querySelector(".btn-info").dataset.id = product.id;
     templateCart.querySelector(".btn-danger").dataset.id = product.id;
     templateCart.querySelector("span").textContent =
       product.cantidad * product.precio;
+
     const clone = templateCart.cloneNode(true);
     fragment.appendChild(clone);
   });

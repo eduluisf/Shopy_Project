@@ -16,28 +16,32 @@
   padding: 16px auto;
   height: 0vh;
   margin: 0px;
-  align-items: flex-start;
+  align-items: center;
   align-content: center;
-  align-content: center;
+  justify-content: flex-start;
+  width: 100%;
 }
 .filterItem {
   font-size: 16px;
   display: flex;
-  flex-direction: column;
-  padding: 8px 16px;
+  flex-direction: row;
+  width: 100%;
+  padding: 16px 32px;
   align-items: center;
   align-content: center;
+  justify-content: flex-start;
 
   p {
-    font-size: 14px;
+    width: 100%;
+    font-size: 16px;
     height: 3vh;
   }
 
   .filterCat {
     display: flex;
-    flex-direction: column;
+
     align-items: center;
-    align-items: center;
+    align-content: center;
     align-content: space-around;
     margin: 0;
     font-size: 12px;
@@ -47,6 +51,7 @@
     .inputPrice {
       padding: 0;
       margin: 0 4px;
+      width: 40%;
     }
   }
 }
@@ -57,15 +62,16 @@
 }
 
 .inputPrice {
-  width: 30%;
-  margin: 16px;
+  border-radius: 25px;
+  border: 1px solid black;
+  font-size: 16px;
 }
 
 .chkboxContainer {
-  margin: 8px;
+  margin: 4px;
 }
 .filterItem .catfilterit {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
