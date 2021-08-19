@@ -1,5 +1,5 @@
 .container {
-  margin: 64px 0px 0px 28%;
+  margin: 16px 0px 0px 28%;
   padding: 0;
   width: 70%;
   left: 30%;
@@ -12,8 +12,9 @@
 }
 
 .card {
+  background-color: var(--b2);
   display: flex;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   flex-direction: column;
   border-radius: 10px;
   height: 42vh;
@@ -39,9 +40,8 @@
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
-  transform: translateY(-10px);
 }
 
 .btn-dark {
@@ -50,11 +50,43 @@
   background-color: var(--b1);
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 80%;
+  width: 60%;
 }
 .btn-dark:hover {
   color: black;
   background-color: var(--b6);
   border: none;
   border: 1px solid rgb(136, 136, 136);
+}
+
+.containerCardsMen {
+  margin: 16px 0px 0px 28%;
+  padding: 0;
+  width: 70%;
+  left: 30%;
+}
+.cardMen,
+.cardWomen {
+  display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  border-radius: 10px;
+  height: 45vh;
+  padding: 8px 16px 8px 16px;
+  margin: 16px 0;
+  width: 316px;
+
+  .card-body {
+    padding-top: 0;
+    height: 90%;
+  }
+  img {
+    margin: 0px auto;
+    width: 75%;
+    border-radius: 10%;
+    height: 68%;
+  }
+  p {
+    font-size: 16px;
+  }
 }

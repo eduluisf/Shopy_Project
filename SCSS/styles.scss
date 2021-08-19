@@ -5,6 +5,11 @@
   --b3: #f1f1f1;
   --b5: #f7bcb8;
   --b6: #fcfcfc;
+
+  --gradient-start: #f78fad;
+  --gradient-start-text: "#F78FAD";
+  --gradient-end: #fdeb82;
+  --gradient-end-text: "#FDEB82";
 }
 body {
   background-color: var(--b2);
@@ -45,9 +50,10 @@ a {
 /*Filters*/
 @import "filter";
 
-/*Media querys*/
+@import "gridOffAllow";
 
-@import "mq376";
-@import "mq768";
-@import "mq1024";
+/*Media querys*/
 @import "mq1200";
+@import "mq1024";
+@import "mq768";
+@import "mq376";

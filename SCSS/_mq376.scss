@@ -1,4 +1,4 @@
-@media (max-width: 376px) {
+@media (max-width: 540px) {
   .navigation {
     display: flex;
     flex-direction: row;
@@ -7,11 +7,22 @@
     background-color: var(--b2);
     overflow: hidden;
     position: fixed;
+    margin: 0;
+    top: 0;
+    .navContainer {
+      width: 100%;
+      .userContainerBuscador {
+        display: none;
+      }
+    }
+
+    .logoContainer {
+      margin: 0px 8px 0 0px;
+    }
   }
 
   .buscador {
     display: none;
-    justify-content: space-around;
     align-items: center;
     width: 300px;
     border-radius: 10px;
@@ -19,62 +30,44 @@
     margin: 0em;
   }
 
-  .logoContainer p {
-    margin-top: 16px;
-  }
-  .logoContainer a {
-    display: flex;
-    font-size: 32px;
-    color: var(--b4);
-    justify-content: space-around;
-    margin: 16px 0px 16px 32px;
-  }
-  .logoContainer a {
-    display: fixed;
-    z-index: 3;
-    bottom: 0;
-  }
-
-  .navigation .navContainer .userContainer {
-    padding: 0 16px;
-
-    font-size: 16px;
-    z-index: 3;
-  }
   .navigation .navContainer .userContainer .menu_container {
-    width: 100%;
+    width: 70%;
     height: 100vh;
     flex-direction: column;
     padding: 0;
-    background-color: var(--b1);
+    background-color: var(--b2);
     position: fixed;
-    left: 0px;
-    top: 64px;
+    margin: 0px;
+    top: 60px;
     border-bottom: solid 1px var(--b4);
-    height: 95vh;
-    bottom: 64px;
-    left: 100%;
+    left: 20%;
     transition: left 0.4s;
+    align-content: flex-end;
+    align-items: flex-end;
   }
 
   .navigation .navContainer .userContainer .menu_container .userItem {
-    width: 90%;
-    margin: 24px 16px 24px 6px;
-    height: 10%;
+    display: flex;
+    width: 85%;
+    margin: 8px auto;
     border-radius: 25px;
-    background-color: var(--b3);
+    background-color: var(--b2);
     box-shadow: 0 4px 8px 0 rgba(66, 62, 3, 0.2),
       0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    align-content: flex-end;
+    align-items: center;
+    height: 6vh;
   }
 
   .navigation .navContainer .userContainer .menu_container .userItem a {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   .buscador .searchbtn {
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
+    align-content: center;
     height: 36px;
     width: 36px;
     background-color: var(--b1);
@@ -84,14 +77,10 @@
   }
 
   .hamb-menu {
-    font-size: 32px;
-    border: none;
-    background: transparent;
-    display: block;
-    margin: 12px 16px 16px 112px;
+    margin: 14px 16px 24px 15vh;
   }
 
   .navigation .navContainer .userContainer .menu_visible {
-    left: 0%;
+    left: 100%;
   }
 }

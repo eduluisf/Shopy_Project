@@ -52,3 +52,54 @@
     }
   }
 }
+
+@media (max-width: 540px) {
+  .mainadvice {
+    height: 40vh;
+    padding: 0;
+
+    img {
+      width: 100%;
+      border-radius: 6px;
+      margin: 32px;
+    }
+
+    .btn {
+      width: 100%;
+      margin: 0 28px;
+      font-size: 8px;
+    }
+
+    .mainAdvContent {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+
+      justify-content: space-around;
+      padding: 16px 8px;
+
+      .textAdviceContainer {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+
+        p {
+          display: none;
+
+          font-size: 12px;
+          margin: 4px;
+        }
+
+        h3 {
+          margin: 16px 32px;
+          font-size: 24px;
+          span {
+            color: orange;
+          }
+        }
+      }
+    }
+  }
+}
