@@ -1,10 +1,10 @@
 .filtercontainer {
   position: fixed;
   background-color: var(--b2);
-  padding: 8px;
+  padding: 4px 8px;
   width: 20%;
-  height: 90vh;
-  margin: 8px 32px;
+  height: 85vh;
+  margin: 32px;
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(66, 62, 3, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
@@ -16,37 +16,47 @@
   padding: 16px auto;
   height: 0vh;
   margin: 0px;
-  align-items: flex-start;
-  align-content: center;
-  align-content: center;
-}
-.filterItem {
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
-  padding: 8px 16px;
   align-items: center;
   align-content: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.filterItem {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 12px 32px;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
 
   p {
-    font-size: 14px;
+    width: 100%;
+    font-size: 16px;
     height: 3vh;
   }
 
   .filterCat {
     display: flex;
-    flex-direction: column;
+
     align-items: center;
-    align-items: center;
+    align-content: center;
     align-content: space-around;
     margin: 0;
     font-size: 12px;
   }
 
   .filterPrecio {
+    margin: 4px;
+
+    h3 {
+      margin-bottom: 16px;
+    }
     .inputPrice {
       padding: 0;
-      margin: 0 4px;
+      margin: 4px;
+      width: 40%;
     }
   }
 }
@@ -57,15 +67,17 @@
 }
 
 .inputPrice {
-  width: 30%;
-  margin: 16px;
+  border-radius: 25px;
+  border: 1px solid black;
+  font-size: 16px;
 }
 
 .chkboxContainer {
-  margin: 8px;
+  margin: 4px;
 }
 .filterItem .catfilterit {
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }

@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "animate.css": "^4.1.1"
+    "animate.css": "^4.1.1",
+    "sweetalert2": "^11.1.2"
   },
   "name": "4taentrega_eduardosierra",
   "version": "1.0.0",
@@ -16,5 +17,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduluisf/Shopy_Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eduluisf/Shopy_Project/issues"
+  },
+  "homepage": "https://github.com/eduluisf/Shopy_Project#readme",
   "description": ""
 }

@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .navigation {
     display: flex;
     flex-direction: row;
@@ -9,6 +9,16 @@
     position: fixed;
     margin: 0;
     top: 0;
+    .navContainer {
+      width: 70%;
+      .userContainerBuscador {
+        display: none;
+      }
+    }
+
+    .logoContainer {
+      margin: 0px 16px 0 0px;
+    }
   }
 
   .buscador {
@@ -20,25 +30,18 @@
     margin: 0em;
   }
 
-  .navigation .navContainer .userContainer {
-    padding: 0 16px;
-
-    font-size: 16px;
-    z-index: 3;
-  }
-
   .navigation .navContainer .userContainer .menu_container {
-    width: 100%;
+    width: 60%;
     height: 100vh;
     flex-direction: column;
     padding: 0;
-    background-color: var(--b1);
+    background-color: var(--b2);
     position: fixed;
     margin: 0px;
     top: 60px;
     border-bottom: solid 1px var(--b4);
     height: 100vh;
-    left: 100%;
+    left: 40%;
     transition: left 0.4s;
     align-content: flex-end;
     align-items: flex-end;
@@ -46,10 +49,9 @@
 
   .navigation .navContainer .userContainer .menu_container .userItem {
     display: flex;
-    width: 95%;
+    width: 85%;
     padding: 12px;
-    margin: 12px 16px 0px 12px;
-    height: 10%;
+    margin: 12px auto;
     border-radius: 25px;
     background-color: var(--b2);
     box-shadow: 0 4px 8px 0 rgba(66, 62, 3, 0.2),
@@ -63,7 +65,7 @@
   }
 
   .buscador .searchbtn {
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     align-content: center;
@@ -80,10 +82,10 @@
     border: none;
     background: transparent;
     display: block;
-    margin: 14px 16px 24px 30vh;
+    margin: 14px 16px 24px 43vh;
   }
 
   .navigation .navContainer .userContainer .menu_visible {
-    left: 0%;
+    left: 100%;
   }
 }

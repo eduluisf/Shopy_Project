@@ -1,27 +1,43 @@
+// Se toman los items por id
+
 const cards = document.getElementById("cards");
 const items = document.getElementById("items");
 const footer = document.getElementById("footer");
 const templateCard = document.getElementById("template-card").content;
 
 const templateCart = document.getElementById("template-cart").content;
+
 const templateFooter = document.getElementById("template-footer").content;
 const fragment = document.createDocumentFragment();
-let cart = {};
 
+// seleccion del boton hamburguesa para el uso del responsive
 const navToggle = document.querySelector(".hamb-menu");
 const navMenu = document.querySelector(".menu_container");
+
+// creacion del objeto carro
+let cart = {};
 
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("menu_visible");
 });
-
-const buttonCart = $(".buttonCart");
+const buttonCart = document.querySelector(".buttonCart");
 const tableContainer = document.querySelector(".tableContainer");
 
-buttonCart.on("click", () => {
+buttonCart.addEventListener("click", () => {
   tableContainer.classList.toggle("table_visible");
 });
 
+// promesa hecha con fectch y uso del metodo showcards para pintar las cards con la llamada del JSON api.json
+
+const fetchData = async () => {
+  try {
+    const res = await fetch("api.json");
+    const data = await res.json();
+    showCards(data);
+  } catch (error) {}
+};
+
+// esperamos a que el contenido se cargue y se ejecutamos la funcion
 document.addEventListener("DOMContentLoaded", () => {
   fetchData();
 
@@ -31,21 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+//Ejecutamos las funciones a traves de los clicks usando addeventlistener
 cards.addEventListener("click", (e) => {
-  addCart(e);
+  addcCart(e);
 });
 
 items.addEventListener("click", (e) => {
   btnAction(e);
 });
 
-const fetchData = async () => {
-  try {
-    const res = await fetch("api.json");
-    const data = await res.json();
-    showCards(data);
-  } catch (error) {}
-};
+//Funcion mosttrar cartas
 
 const showCards = (data) => {
   data.forEach((product) => {
@@ -59,7 +70,8 @@ const showCards = (data) => {
   cards.appendChild(fragment);
 };
 
-const addCart = (e) => {
+//Selecciona del item selccionado
+const addcCart = (e) => {
   if (e.target.classList.contains("btn-dark")) {
     setCart(e.target.parentElement);
   }
@@ -67,15 +79,14 @@ const addCart = (e) => {
   e.stopPropagation();
 };
 
+//Guardamos en un objeto los items tomados de la carta y asignamos una cantidad inical de 1
 const setCart = (obj) => {
   const product = {
     id: obj.querySelector(".btn-dark").dataset.id,
     title: obj.querySelector("h5").textContent,
     precio: obj.querySelector("p").textContent,
-    src: obj.querySelector("img").getAttribute("src"),
     cantidad: 1,
   };
-
   if (cart.hasOwnProperty(product.id)) {
     product.cantidad = cart[product.id].cantidad + 1;
   }
@@ -85,18 +96,19 @@ const setCart = (obj) => {
   showCart();
 };
 
+//Llevamos los datos al carrito
 const showCart = () => {
   items.innerHTML = "";
 
   Object.values(cart).forEach((product) => {
     templateCart.querySelector("th").textContent = product.id;
-    templateCart.querySelector("img").setAttribute("src", product.src);
     templateCart.querySelectorAll("td")[1].textContent = product.cantidad;
     templateCart.querySelectorAll("td")[0].textContent = product.title;
     templateCart.querySelector(".btn-info").dataset.id = product.id;
     templateCart.querySelector(".btn-danger").dataset.id = product.id;
     templateCart.querySelector("span").textContent =
       product.cantidad * product.precio;
+
     const clone = templateCart.cloneNode(true);
     fragment.appendChild(clone);
   });
@@ -106,6 +118,7 @@ const showCart = () => {
   localStorage.setItem("carrito", JSON.stringify(cart));
 };
 
+// operaciones del footer y ajustamos la cantidad y el precio total de elementos
 const showFooter = () => {
   footer.innerHTML = "";
   if (Object.keys(cart) == 0) {
@@ -131,6 +144,7 @@ const showFooter = () => {
   fragment.appendChild(clone);
   footer.appendChild(fragment);
 
+  // eliminamos todos los item del carro
   const btnEmptyCart = document.getElementById("emptyCart");
 
   btnEmptyCart.addEventListener("click", () => {
@@ -139,6 +153,7 @@ const showFooter = () => {
   });
 };
 
+// contolador de cantidad en aumento o disminucion en uno por cada click.
 const btnAction = (e) => {
   if (e.target.classList.contains("btn-info")) {
     console.log(cart[e.target.dataset.id]);
