@@ -1,13 +1,22 @@
-.filtercontainer {
+.filterFix {
+  width: 100%;
+  overflow: auto;
   position: fixed;
+  z-index: 1;
+  margin: 0px;
+}
+
+.filtercontainer {
+  display: flex;
+  flex-direction: column;
   background-color: var(--b2);
   padding: 4px 8px;
   width: 20%;
   height: 85vh;
   margin: 32px;
-  flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(66, 62, 3, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 10px;
+  border-radius: 16px;
+  z-index: 2;
 }
 
 .filterItems {
