@@ -151,87 +151,10 @@ header {
 .buscador .searchButton {
   width: 90%; }
 
-@media (max-width: 376px) {
-  .navigation {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 8vh;
-    background-color: red;
-    overflow: hidden;
-    position: fixed; }
-    .navigation .navContainer {
-      padding: 0 16px;
-      font-size: 16px;
-      z-index: 3; }
-  .buscador {
-    display: none;
-    justify-content: space-around;
-    align-items: center;
-    width: 300px;
-    border-radius: 10px;
-    padding: 4px 0px;
-    margin: 0em; }
-  .logoContainer p {
-    margin-top: 16px; }
-  .logoContainer a {
-    display: flex;
-    font-size: 32px;
-    color: var(--b4);
-    justify-content: space-around;
-    margin: 16px 0px 16px 32px; }
-  .logoContainer a {
-    display: fixed;
-    z-index: 3;
-    bottom: 0; }
-  .navigation .navContainer .userContainer {
-    padding: 0 16px;
-    font-size: 16px;
-    z-index: 3; }
-  .navigation .navContainer .userContainer .menu_container {
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-    padding: 0;
-    background-color: red;
-    position: fixed;
-    left: 20%;
-    top: 64px;
-    border-bottom: solid 1px var(--b4);
-    height: 95vh;
-    bottom: 64px; }
-  .navigation .navContainer .userContainer .menu_container .userItem {
-    width: 70%;
-    margin: 24px 16px 24px 6px;
-    height: 10%;
-    border-radius: 25px;
-    background-color: red;
-    box-shadow: 0 4px 8px 0 rgba(66, 62, 3, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); }
-  .navigation .navContainer .userContainer .menu_container .userItem a {
-    font-size: 24px; }
-  .buscador .searchbtn {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 36px;
-    width: 36px;
-    background-color: var(--b1);
-    color: white;
-    font-size: 14px;
-    border-radius: 0 10px 10px 0; }
-  .hamb-menu {
-    font-size: 32px;
-    border: none;
-    background: transparent;
-    display: block;
-    margin: 0; }
-  .navigation .navContainer .userContainer .menu_visible {
-    left: 20%; } }
-
 .mainadvice {
   width: 90%;
   background-color: #ffffff;
-  height: 88vh;
+  height: 70vh;
   margin: 32px auto 16px auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
@@ -268,46 +191,12 @@ header {
         .mainadvice .mainAdvContent .textAdviceContainer h3 span {
           color: orange; }
 
-@media (max-width: 540px) {
-  .mainadvice {
-    height: 40vh;
-    padding: 0; }
-    .mainadvice img {
-      width: 100%;
-      border-radius: 6px;
-      margin: 32px; }
-    .mainadvice .btn {
-      width: 100%;
-      margin: 0 28px;
-      font-size: 8px; }
-    .mainadvice .mainAdvContent {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      align-content: center;
-      justify-content: space-around;
-      padding: 16px 8px; }
-      .mainadvice .mainAdvContent .textAdviceContainer {
-        display: flex;
-        flex-direction: column;
-        width: 30%; }
-        .mainadvice .mainAdvContent .textAdviceContainer p {
-          display: none;
-          font-size: 12px;
-          margin: 4px; }
-        .mainadvice .mainAdvContent .textAdviceContainer h3 {
-          margin: 16px 32px;
-          font-size: 24px; }
-          .mainadvice .mainAdvContent .textAdviceContainer h3 span {
-            color: orange; } }
-
 /* caorusel */
 .containerCarousel {
   width: 90%;
   margin: 72px auto 8px auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 15px;
+  border-radius: 12px;
   animation: fadeInLeft 2.1s cubic-bezier(0, 0.96, 0.38, 1);
   overflow: hidden;
   padding: 0%;
@@ -317,17 +206,18 @@ header {
   width: 100%;
   height: 46vh;
   overflow: hidden;
-  border-radius: 15px; }
+  border-radius: 12px; }
 
 /*footer */
 .inf-Footer {
-  position: absolute;
-  margin: 32px 0px 0px;
+  margin: 32px 0px 0px 0px;
   display: grid;
   width: 100%;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100px;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 2;
+  bottom: 0%; }
 
 .containerCard {
   display: grid;
@@ -344,6 +234,16 @@ header {
     column-gap: 32px;
     grid-template-rows: 100px;
     font-size: 24px; }
+
+.inf-FooterMan {
+  margin: 16px 0px 32px 28%;
+  width: 70%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 16px; }
 
 .containerinfomain {
   display: flex;
@@ -408,8 +308,7 @@ header {
   border-radius: 10px;
   height: 42vh;
   padding: 32px;
-  margin: 16px 0;
-  width: 280px; }
+  margin: 16px 0; }
   .card img {
     margin: 0px auto;
     width: 60%;
@@ -441,12 +340,6 @@ header {
   background-color: var(--b6);
   border: none;
   border: 1px solid #888888; }
-
-.containerCardsMen {
-  margin: 16px 0px 0px 28%;
-  padding: 0;
-  width: 70%;
-  left: 30%; }
 
 .cardMen,
 .cardWomen {
@@ -656,16 +549,24 @@ header {
   justify-content: center; }
 
 /*Filters*/
-.filtercontainer {
+.filterFix {
+  width: 100%;
+  overflow: auto;
   position: fixed;
+  z-index: 1;
+  margin: 0px; }
+
+.filtercontainer {
+  display: flex;
+  flex-direction: column;
   background-color: var(--b2);
   padding: 4px 8px;
   width: 20%;
   height: 85vh;
   margin: 32px;
-  flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(66, 62, 3, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 10px; }
+  border-radius: 16px;
+  z-index: 2; }
 
 .filterItems {
   display: flex;
@@ -728,12 +629,13 @@ header {
 .gridOffAllow {
   display: grid;
   height: 40vh;
-  gap: 10px;
+  gap: 16px;
   margin: 64px 0px 16px 28%;
   padding: 32px 0px 0px 0px;
   width: 70%;
   border-radius: 10px;
-  grid-template-columns: repeat(4, 1fr); }
+  grid-template-columns: repeat(4, 1fr);
+  z-index: 3; }
   .gridOffAllow .itemGridOffAllow {
     background-color: var(--b2);
     width: 100%;
@@ -874,7 +776,93 @@ header {
     display: block;
     margin: 14px 16px 24px 43vh; }
   .navigation .navContainer .userContainer .menu_visible {
-    left: 100%; } }
+    left: 100%; }
+  .containerCarousel {
+    height: 32vh;
+    overflow: hidden;
+    margin-top: 84px; }
+  .carousel-item {
+    height: 32vh;
+    overflow: hidden; }
+  .mainadvice {
+    height: 40vh;
+    padding: 0; }
+    .mainadvice img {
+      border-radius: 16px;
+      margin: 32px; }
+    .mainadvice .btn {
+      width: 100%;
+      margin: 0 0px 16px 16px;
+      font-size: 12px; }
+    .mainadvice .mainAdvContent {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      justify-content: space-around;
+      padding: 16px 8px; }
+      .mainadvice .mainAdvContent .textAdviceContainer {
+        display: flex;
+        flex-direction: column;
+        width: 30%; }
+        .mainadvice .mainAdvContent .textAdviceContainer p {
+          font-size: 10px;
+          margin: 4px 0px 16px 0px;
+          text-align: left; }
+        .mainadvice .mainAdvContent .textAdviceContainer h3 {
+          margin: 16px;
+          font-size: 18px; }
+          .mainadvice .mainAdvContent .textAdviceContainer h3 span {
+            color: orange; }
+  .container {
+    margin: 16px 0px 0px 28%;
+    padding: 0;
+    width: 70%;
+    left: 30%; }
+  .containerMain {
+    margin: 8px 70px;
+    padding: 0;
+    width: 92%;
+    border-radius: 10px; }
+  .card {
+    background-color: var(--b2);
+    display: flex;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    border-radius: 10px;
+    height: 42vh;
+    padding: 32px;
+    margin: 16px 0;
+    width: 280px; }
+    .card img {
+      margin: 0px auto;
+      width: 60%;
+      border-radius: 10%;
+      height: 50%; }
+    .card .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center; }
+  .card:hover {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    text-align: center; }
+  .btn-dark {
+    border-radius: 25px;
+    color: white;
+    background-color: var(--b1);
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 60%; }
+  .btn-dark:hover {
+    color: black;
+    background-color: var(--b6);
+    border: none;
+    border: 1px solid #888888; } }
 
 @media (max-width: 540px) {
   .navigation {
@@ -940,4 +928,73 @@ header {
   .hamb-menu {
     margin: 14px 16px 24px 15vh; }
   .navigation .navContainer .userContainer .menu_visible {
-    left: 100%; } }
+    left: 100%; }
+  .containerCarousel {
+    height: 18vh; }
+  .carousel-item {
+    height: 18vh; }
+  .containerinfomain {
+    height: 18vh; }
+  .mainadvice {
+    height: 18vh;
+    padding: 0; }
+    .mainadvice img {
+      border-radius: 6px;
+      margin: 32px; }
+    .mainadvice .btn {
+      width: 100%;
+      margin: 0 0px 16px 16px;
+      font-size: 6px; }
+    .mainadvice .mainAdvContent {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      justify-content: space-around;
+      padding: 16px 8px; }
+      .mainadvice .mainAdvContent .textAdviceContainer {
+        display: flex;
+        flex-direction: column;
+        width: 30%; }
+        .mainadvice .mainAdvContent .textAdviceContainer p {
+          display: none;
+          font-size: 8px;
+          margin: 4px; }
+        .mainadvice .mainAdvContent .textAdviceContainer h3 {
+          margin: 16px;
+          font-size: 16px; }
+          .mainadvice .mainAdvContent .textAdviceContainer h3 span {
+            color: orange; }
+  .containerMain {
+    margin: 8px 10%;
+    padding: 0;
+    width: 10px; }
+  .card {
+    border-radius: 10px;
+    height: 25vh;
+    margin: 8 !important;
+    width: 20vh !important; }
+    .card img {
+      margin: 0px auto;
+      width: 30%;
+      border-radius: 10%;
+      height: 40%; }
+    .card h5 {
+      font-size: 12px; }
+    .card p {
+      font-size: 14px; }
+    .card .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center; }
+  .card:hover {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    text-align: center; }
+  .btn-dark {
+    width: 100%;
+    font-size: 12px; } }
