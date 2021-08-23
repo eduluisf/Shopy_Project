@@ -350,7 +350,8 @@ header {
   height: 45vh;
   padding: 8px 16px 8px 16px;
   margin: 16px 0;
-  width: 316px; }
+  width: 316px;
+  z-index: 1; }
   .cardMen .card-body,
   .cardWomen .card-body {
     padding-top: 0;
@@ -638,8 +639,12 @@ header {
   width: 70%;
   border-radius: 10px;
   grid-template-columns: repeat(4, 1fr);
-  z-index: 3; }
+  z-index: 1; }
   .gridOffAllow .itemGridOffAllow {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--b2);
     width: 100%;
     border-radius: 16px;
@@ -870,7 +875,39 @@ header {
   .tableContainer {
     left: 58%; }
   .table_visible {
-    left: 100%; } }
+    left: 100%; }
+  .gridOffAllow {
+    height: 30vh;
+    margin: 64px 0px 16px 28%;
+    padding: 32px 16px;
+    border-radius: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    z-index: 1; }
+  .cardWomen,
+  .cardMen {
+    display: flex;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    border-radius: 10px;
+    height: 22vh;
+    padding: 8px 16px 8px 16px;
+    margin: 16px 0;
+    width: 316px;
+    z-index: 1; }
+    .cardWomen .card-body,
+    .cardMen .card-body {
+      padding-top: 0;
+      height: 100%; }
+    .cardWomen img,
+    .cardMen img {
+      margin: 0px auto;
+      width: 70%;
+      border-radius: 10%;
+      height: 90%;
+      padding-top: 16px; }
+    .cardWomen p,
+    .cardMen p {
+      font-size: 16px; } }
 
 @media (max-width: 540px) {
   .navigation {
@@ -1045,16 +1082,19 @@ header {
     height: 30vh;
     gap: 16px;
     margin: 64px 0px 16px 0px;
-    padding: 32px 8px 0px 8px;
+    padding: 32px 8px;
     width: 100%;
     border-radius: 10px;
     grid-template-columns: repeat(4, 1fr);
-    z-index: 3; }
+    z-index: 1; }
     .gridOffAllow .itemGridOffAllow {
+      z-index: 1;
       background-color: var(--b2);
       width: 100%;
       border-radius: 16px;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); }
+      .gridOffAllow .itemGridOffAllow h3 {
+        font-size: 2px; }
     .gridOffAllow .itemGridOffAllow:hover {
       background-color: var(--b2);
       width: 100%;
