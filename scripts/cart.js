@@ -10,23 +10,6 @@ const templateCart = document.getElementById("template-cart").content;
 const templateFooter = document.getElementById("template-footer").content;
 const fragment = document.createDocumentFragment();
 
-// seleccion del boton hamburguesa para el uso del responsive
-const navToggle = document.querySelector(".hamb-menu");
-const navMenu = document.querySelector(".menu_container");
-
-// creacion del objeto carro
-let cart = {};
-
-navToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("menu_visible");
-});
-const buttonCart = document.querySelector(".buttonCart");
-const tableContainer = document.querySelector(".tableContainer");
-
-buttonCart.addEventListener("click", () => {
-  tableContainer.classList.toggle("table_visible");
-});
-
 // promesa hecha con fectch y uso del metodo showcards para pintar las cards con la llamada del JSON api.json
 
 const fetchData = async () => {
