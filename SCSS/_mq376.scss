@@ -236,17 +236,21 @@
     height: 30vh;
     gap: 16px;
     margin: 64px 0px 16px 0px;
-    padding: 32px 8px 0px 8px;
+    padding: 32px 8px;
     width: 100%;
     border-radius: 10px;
     grid-template-columns: repeat(4, 1fr);
-    z-index: 3;
+    z-index: 1;
 
     .itemGridOffAllow {
+      z-index: 1;
       background-color: var(--b2);
       width: 100%;
       border-radius: 16px;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      h3 {
+        font-size: 2px;
+      }
     }
 
     .itemGridOffAllow:hover {

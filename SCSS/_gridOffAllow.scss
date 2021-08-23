@@ -7,9 +7,13 @@
   width: 70%;
   border-radius: 10px;
   grid-template-columns: repeat(4, 1fr);
-  z-index: 3;
+  z-index: 1;
 
   .itemGridOffAllow {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--b2);
     width: 100%;
     border-radius: 16px;

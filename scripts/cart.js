@@ -44,7 +44,7 @@ items.addEventListener("click", (e) => {
 const showCards = (data) => {
   data.forEach((product) => {
     templateCard.querySelector("h5").textContent = product.title;
-    templateCard.querySelector("p").textContent = product.precio;
+    templateCard.querySelector("p").textContent = "$" + product.precio;
     templateCard.querySelector("img").setAttribute("src", product.thumbnailUrl);
     templateCard.querySelector(".btn-dark").dataset.id = product.id;
     const clone = templateCard.cloneNode(true);
